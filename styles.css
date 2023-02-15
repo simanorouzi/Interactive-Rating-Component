@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --medium-dark-blue: hsl(213, 19%, 25%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+}
+body {
+  background-color: var(--very-dark-blue);
+  font-family: 'Overpass';
+  color: var(--white);
+}
+p {
+  font-size: 15px;
+  color: var(--light-grey);
+}
+.rating,
+.rating-tankful {
+  border-radius: 20px;
+  background-color: var(--dark-blue);
+  margin: 10% auto;
+  padding: 20px;
+}
+
+.rating-tankful {
+  text-align: center;
+}
+
+.rating-tankful svg {
+  margin-top: 20px;
+}
+
+.rating .star-frame {
+  border-radius: 50%;
+  padding: 10px;
+  width: 17px;
+  height: 16px;
+  background-color: hsl(213, 19%, 25%);
+}
+
+.rating-value {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.rating-value a {
+  border-radius: 50%;
+  padding: 10px 15px;
+  background-color: hsl(213, 19%, 25%);
+  color: var(--light-grey);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.rating-value a:hover {
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+
+.rating-value a:focus {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.rating .submit {
+  color: var(--white);
+  background-color: var(--orange);
+  border-radius: 30px;
+  width: 100%;
+  height: 40px;
+  margin: 30px 0 auto;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0;
+}
+.rating .submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+.rating-tankful .result {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: var(--medium-dark-blue);
+  color: var(--orange);
+  width: 50%;
+  margin: 30px auto;
+}
+
+@media only screen and (max-width: 780px) {
+  .rating,
+  .rating-tankful {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .rating,
+  .rating-tankful {
+    width: 20%;
+  }
+}
