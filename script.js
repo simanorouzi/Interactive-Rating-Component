@@ -1,10 +1,17 @@
-document.getElementById('submit').onclick = function (e) {
-  location.href = 'thankfulPage.html';
-};
+const btnSubmit = document.querySelector('#submit');
+const items = document.querySelectorAll('#rating a');
 
-document.getElementById('rating').getElementsByTagName('a').onclick = function (
-  e
-) {
-  e.preventDefault();
-  console.log('fsfsd');
-};
+console.log(items);
+
+btnSubmit.addEventListener('click', function (e) {
+  location.href = 'thankfulPage.html';
+});
+
+items.forEach((item) => {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    e.target.classList.toggle('active');
+    console.log(e.target.dataset.value);
+  });
+});

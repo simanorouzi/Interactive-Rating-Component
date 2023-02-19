@@ -63,7 +63,7 @@ p {
   color: var(--white);
 }
 
-.rating-value a:focus {
+.rating-value a.active {
   background-color: var(--orange);
   color: var(--white);
 }
