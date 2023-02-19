@@ -1,17 +1,21 @@
+const firstPage = document.querySelector('#first-page');
+const thankfulPage = document.querySelector('#rating-tankful');
 const btnSubmit = document.querySelector('#submit');
 const items = document.querySelectorAll('#rating a');
-
-console.log(items);
+const rateVal = document.querySelector('#rate-val');
 
 btnSubmit.addEventListener('click', function (e) {
-  location.href = 'thankfulPage.html';
+  firstPage.classList.add('unshow');
+  thankfulPage.classList.remove('unshow');
 });
 
 items.forEach((item) => {
   item.addEventListener('click', function (e) {
     e.preventDefault();
-
-    e.target.classList.toggle('active');
-    console.log(e.target.dataset.value);
+    items.forEach((s) => {
+      s.classList.remove('active');
+    });
+    e.target.classList.add('active');
+    rateVal.innerHTML = e.target.dataset.value;
   });
 });
